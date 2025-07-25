@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venkat Badhrinarayanan PV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .contact-button {
+  background: linear-gradient(135deg, #b9fbc0, #9ae6b4); /* pastel green gradient */
+  color: #034d2d;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(154, 230, 180, 0.5);
+  position: relative;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+  display: inline-block;
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  transform: skewX(-30deg);
+  transition: left 0.5s ease;
+  z-index: 0;
+}
+
+.contact-button:hover::before {
+  left: 200%;
+}
+
+.contact-button:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 10px 25px rgba(154, 230, 180, 0.7);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-green-600">Venkat's Portfolio</h1>
+      <nav>
+       <!-- <ul class="flex gap-6 text-sm">
+          <li><a href="#home" class="hover:text-green-600 transition">Home</a></li>
+          <li><a href="#about" class="hover:text-green-600 transition">About</a></li>
+          <li><a href="#projects" class="hover:text-green-600 transition">Projects</a></li>
+          <li><a href="#contact" class="hover:text-green-600 transition">Contact</a></li>
+        </ul>-->
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-green-100 to-white pt-16" data-aos="fade-up">
+    <div class="text-center">
+      <h2 class="text-4xl font-bold mb-2">Hi, I'm <span class="text-green-600">Venkat</span></h2>
+      <p class="text-xl text-gray-600">Web Developer | CSE Student | Linux Enthusiast</p>
+      <div class="mt-6">
+        <a href="#projects" class="bg-green-600 text-white px-6 py-2 rounded-full shadow hover:bg-green-700 transition">View My Work</a>
+      </div>
+    </div>
+    <div class="mt-10 w-40 h-40 rounded-full overflow-hidden border-4 border-green-600">
+      <img src="G:\portfolio website\venkat.jpg" alt="Venkat Photo" class="object-cover w-full h-full" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-white" data-aos="fade-right">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold text-green-600 mb-4">About Me</h3>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        I'm Venkat Badhrinarayanan PV, a Computer Science student passionate about building purposeful technology. With hands-on experience in Linux systems, C, Python, and front-end web development, I’m constantly exploring new ways to bring impactful ideas to life. I'm currently working on a tourist guide app and a smart food expiry tracker aimed at reducing waste.
+      </p>
+      <div class="flex space-x-4 mt-6">
+        <a href="https://github.com/venkatengineer" target="_blank" class="text-gray-600 hover:text-green-600 transition">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/venkat-badhrinarayanan-747148264/" target="_blank" class="text-gray-600 hover:text-green-600 transition">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://twitter.com/VENKA" target="_blank" class="text-gray-600 hover:text-green-600 transition">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6 bg-green-50" data-aos="fade-left">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold text-green-600 mb-10">Projects</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white shadow rounded-lg p-6 transition-transform transform hover:scale-105" data-aos="zoom-in">
+          <h4 class="text-xl font-semibold mb-2">Tourist Guide App</h4>
+          <p class="text-gray-600">An app that connects tourists to local guides and hidden places, promoting safe exploration and job creation. (In Progress)</p>
+        </div>
+        <div class="bg-white shadow rounded-lg p-6 transition-transform transform hover:scale-105" data-aos="zoom-in">
+          <h4 class="text-xl font-semibold mb-2">Expiry Date Tracker</h4>
+          <p class="text-gray-600">A web app that tracks expiry dates from receipts and suggests recipes or donations to NGOs to reduce food waste. (In Progress)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-white" data-aos="fade-up">
+    <div class="max-w-2xl mx-auto">
+      <h3 class="text-3xl font-bold text-green-600 mb-4">Contact Me</h3>
+      <form class="space-y-4">
+        <a href="contact.html" class="contact-button">📧 Contact Me</a>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-green-100 text-sm text-gray-600">
+    &copy; 2025 Venkat Badhrinarayanan PV. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {
+      name: form[0].value,
+      email: form[1].value,
+      message: form[2].value,
+    };
+
+    try {
+      const res = await fetch("http://localhost:3000/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        alert("Message sent!");
+        form.reset();
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (err) {
+      alert("Server error.");
+    }
+  });
+</script>
+
